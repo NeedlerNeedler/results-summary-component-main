@@ -35,14 +35,10 @@ body {
   border-radius: 100%;
   box-shadow: inset 1px 1px 12px 0px hsla(256, 72%, 46%, 1);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-}
-
-.left-text p {
-  opacity: 70%;
-  padding: 6px 15px 0px 15px;
 }
 
 .big-score {
@@ -51,8 +47,15 @@ body {
   padding: 5px;
 }
 
+.left-text p {
+  opacity: 70%;
+  padding: 6px 15px 0px 15px;
+}
+
+
 .score-con {
   display: flex;
+  
 }
 
 .grey-text {
@@ -77,20 +80,24 @@ img {
   font-weight: bold;
   margin-bottom: 15px;
   padding: 15px;
+  border-radius: 10px;
 }
 
 .score-memory {
   color: hsl(39, 100%, 56%);
   background-color: hsl(39, 100%, 56%, 0.1);
+  border-radius: 10px;
 }
 
 .score-verbal {
   color: hsl(166, 100%, 37%);
   background-color: hsl(166, 100%, 37%, 0.1);
+  border-radius: 10px;
 }
 .score-visual {
   color: hsl(234, 85%, 45%);
   background-color: hsl(234, 85%, 45%, 0.1);
+  border-radius: 10px;
 }
 
 button {
@@ -113,6 +120,11 @@ button:hover {
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
+  }
+
+  body{
+    display: block;
   }
 
   .container {
@@ -122,19 +134,35 @@ button:hover {
     margin: 0;
     box-shadow: none;
     flex-direction: column;
-    text-align: center;
+    min-height: 100vh;
     border-radius: 0;
+    justify-content: space-between;
   }
 
   .left,
   .right {
     width: 100%;
-    max-width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+
+.right{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
 
   .left {
     border-radius: 0px 0px 20px 20px;
+    height: 300px;
+  }
+
+  .big-score {
+    font-size: 30px;
+  }
+
+  .little-score{
+    font-size: 10px;
+text-wrap: nowrap;
   }
 }
